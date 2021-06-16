@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MagicApp</string>
+    <string name="yes">Is a Magic Number</string>
+    <string name="no">Is Not a Magic Number</string>
+</resources>
