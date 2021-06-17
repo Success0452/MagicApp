@@ -2,6 +2,7 @@ package com.famous.magicapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.famous.magicapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -30,12 +31,16 @@ class MainActivity : AppCompatActivity() {
                 val inputLength = input.length
                 val lastElement = inputVariable / inputLength
 
+
                 if (inputLength == 2) {
                     val element1 = input.elementAt(0)
                     val result = element1.toInt() / inputLength
 
+                    Toast.makeText(this, "$element1", Toast.LENGTH_LONG).show()
+
                     if (result == 10 || lastElement == 10){
                         binding.Anwser.text = "1111"
+
                     }else{
                         binding.Anwser.text = "2222"
                     }
@@ -163,7 +168,7 @@ class MainActivity : AppCompatActivity() {
                     val result4 = element4.toInt() / inputLength
                     val result5 = element5.toInt() / inputLength
                     val result6 = element6.toInt() / inputLength
-                    val result7 = element6.toInt() / inputLength
+                    val result7 = element7.toInt() / inputLength
                     val result8 = element8.toInt() / inputLength
 
                     if (result.compareTo(result) == 0 || lastElement.compareTo(lastElement) == 0 || result2.compareTo(result2) == 0 ||
@@ -180,4 +185,12 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+    private fun el(ele: Any) {
+
+    }
+
+
 }
+
+
