@@ -29,29 +29,33 @@ class MainActivity : AppCompatActivity() {
 
                 val inputVariable = input.toInt()
                 val inputLength = input.length
-                val lastElement = inputVariable / inputLength
+                val test7 = (inputLength - 1)
+                val lastElement = inputVariable % inputLength
 
 
                 if (inputLength == 2) {
                     val element1 = input.elementAt(0)
-                    val result = element1.toInt() / inputLength
 
-                    Toast.makeText(this, "$element1", Toast.LENGTH_LONG).show()
+                    val result = element1.toString().toInt() % 1
 
-                    if (result == 10 || lastElement == 10){
-                        binding.Anwser.text = "1111"
+                    Toast.makeText(this, "$test7", Toast.LENGTH_LONG).show()
+
+                    if (result == 0 && lastElement == 0){
+                        binding.Anwser.text = "Magic Number"
 
                     }else{
-                        binding.Anwser.text = "2222"
+                        binding.Anwser.text = "Not a Magic number"
                     }
+
                 }else if (inputLength == 3){
                     val element1 = input.elementAt(0)
                     val element2 = input.elementAt(1)
 
-                    val result = element1.toInt() / inputLength
-                    val result2 = element2.toInt() / inputLength
+                    
+                    val result = element1.toString().toInt() % 1
+                    val result2 = element2.toString().toInt() % 2
 
-                    if (result.compareTo(result) == 0 || lastElement.compareTo(lastElement) == 0 || result2.compareTo(result2) == 0){
+                    if (result == 0 && lastElement == 0 && result2 == 0){
                         binding.Anwser.text = "$inputVariable" + R.string.yes
                     }else{
                         binding.Anwser.text = "$inputVariable" + R.string.no
@@ -62,28 +66,29 @@ class MainActivity : AppCompatActivity() {
                     val element2 = input.elementAt(1)
                     val element3 = input.elementAt(2)
 
-                    val result = element1.toInt() / inputLength
-                    val result2 = element2.toInt() / inputLength
-                    val result3 = element3.toInt() / inputLength
+                    val result = element1.toString().toInt() % 1
+                    val result2 = element2.toString().toInt() % 2
+                    val result3 = element3.toString().toInt() % 3
 
-                    if (result.compareTo(result) == 0 || lastElement.compareTo(lastElement) == 0 || result2.compareTo(result2) == 0 || result3.compareTo(result3) == 0){
+                    if (result == 0 && lastElement == 0 && result2 == 0 && result3 == 0){
                         binding.Anwser.text = "$inputVariable" + R.string.yes
                     }else{
                         binding.Anwser.text = "$inputVariable" + R.string.no
                     }
+
                 }else if (inputLength == 5) {
                     val element1 = input.elementAt(0)
                     val element2 = input.elementAt(1)
                     val element3 = input.elementAt(2)
                     val element4 = input.elementAt(3)
 
-                    val result = element1.toInt() / inputLength
-                    val result2 = element2.toInt() / inputLength
-                    val result3 = element3.toInt() / inputLength
-                    val result4 = element4.toInt() / inputLength
+                    val result = element1.toString().toInt() % 1
+                    val result2 = element2.toString().toInt() % 2
+                    val result3 = element3.toString().toInt() % 3
+                    val result4 = element4.toString().toInt() % 4
 
-                    if (result.compareTo(result) == 0 || lastElement.compareTo(lastElement) == 0 ||
-                            result2.compareTo(result2) == 0 || result3.compareTo(result3) == 0 || result4.compareTo(result4) == 0){
+                    if (result == 0 && lastElement == 0 &&
+                            result2 == 0 && result3 == 0 && result4 == 0){
                         binding.Anwser.text = "$inputVariable is a magic number"
                     }else{
                         binding.Anwser.text = "$inputVariable is not  a magic number"
