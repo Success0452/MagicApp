@@ -51,14 +51,15 @@ class MainActivity : AppCompatActivity() {
                     val element1 = input.elementAt(0)
                     val element2 = input.elementAt(1)
 
-                    
+
                     val result = element1.toString().toInt() % 1
                     val result2 = element2.toString().toInt() % 2
 
-                    if (result == 0 && lastElement == 0 && result2 == 0){
-                        binding.Anwser.text = "$inputVariable" + R.string.yes
+
+                    if (result == 0 && lastElement == 0 &&  result2 == 0){
+                        binding.Anwser.text = "Magic Number"
                     }else{
-                        binding.Anwser.text = "$inputVariable" + R.string.no
+                        binding.Anwser.text = "Not a Magic number"
                     }
                 }else if (inputLength == 4)
                 {
