@@ -35,10 +35,7 @@ class MainActivity : AppCompatActivity() {
 
                 if (inputLength == 2) {
                     val element1 = input.elementAt(0)
-
                     val result = element1.toString().toInt() % 1
-
-                    Toast.makeText(this, "$test7", Toast.LENGTH_LONG).show()
 
                     if (result == 0 && lastElement == 0){
                         binding.Anwser.text = "Magic Number"
@@ -48,12 +45,13 @@ class MainActivity : AppCompatActivity() {
                     }
 
                 }else if (inputLength == 3){
-                    val element1 = input.elementAt(0)
-                    val element2 = input.elementAt(1)
+                    val element1 = input.elementAt(0).toString().toInt()
+                    val element2 = input.elementAt(1).toString().toInt()
+                    val elementB = element1 + element2
 
+                    val result = element1 % 1
+                    val result2 = elementB % 2
 
-                    val result = element1.toString().toInt() % 1
-                    val result2 = element2.toString().toInt() % 2
 
 
                     if (result == 0 && lastElement == 0 &&  result2 == 0){
@@ -63,140 +61,164 @@ class MainActivity : AppCompatActivity() {
                     }
                 }else if (inputLength == 4)
                 {
-                    val element1 = input.elementAt(0)
-                    val element2 = input.elementAt(1)
-                    val element3 = input.elementAt(2)
+                    val element1 = input.elementAt(0).toString().toInt()
+                    val element2 = input.elementAt(1).toString().toInt()
+                    val element3 = input.elementAt(2).toString().toInt()
 
-                    val result = element1.toString().toInt() % 1
-                    val result2 = element2.toString().toInt() % 2
-                    val result3 = element3.toString().toInt() % 3
+                    val elementB = element1 + element2
+                    val elementC = elementB + element3
+
+                    val result = element1 % 1
+                    val result2 = elementB % 2
+                    val result3 = elementC % 3
 
                     if (result == 0 && lastElement == 0 && result2 == 0 && result3 == 0){
-                        binding.Anwser.text = "$inputVariable" + R.string.yes
+                        binding.Anwser.text = "Magic Number"
                     }else{
-                        binding.Anwser.text = "$inputVariable" + R.string.no
+                        binding.Anwser.text = "Not a Magic number"
                     }
 
                 }else if (inputLength == 5) {
-                    val element1 = input.elementAt(0)
-                    val element2 = input.elementAt(1)
-                    val element3 = input.elementAt(2)
-                    val element4 = input.elementAt(3)
+                    val element1 = input.elementAt(0).toString().toInt()
+                    val element2 = input.elementAt(1).toString().toInt()
+                    val element3 = input.elementAt(2).toString().toInt()
+                    val element4 = input.elementAt(3).toString().toInt()
 
-                    val result = element1.toString().toInt() % 1
-                    val result2 = element2.toString().toInt() % 2
-                    val result3 = element3.toString().toInt() % 3
-                    val result4 = element4.toString().toInt() % 4
+                    val elementB = element1 + element2
+                    val elementC = elementB + element3
+                    val elementD = elementC + element4
+
+                    val result = element1 % 1
+                    val result2 = elementB % 2
+                    val result3 = elementC % 3
+                    val result4 = elementD % 4
 
                     if (result == 0 && lastElement == 0 &&
                             result2 == 0 && result3 == 0 && result4 == 0){
-                        binding.Anwser.text = "$inputVariable is a magic number"
+                        binding.Anwser.text = "Magic Number"
                     }else{
-                        binding.Anwser.text = "$inputVariable is not  a magic number"
+                        binding.Anwser.text = "Is Not a Magic Number"
                     }
                 }else if (inputLength == 6) {
-                    val element1 = input.elementAt(0)
-                    val element2 = input.elementAt(1)
-                    val element3 = input.elementAt(2)
-                    val element4 = input.elementAt(3)
-                    val element5 = input.elementAt(4)
+                    val element1 = input.elementAt(0).toString().toInt()
+                    val element2 = input.elementAt(1).toString().toInt()
+                    val element3 = input.elementAt(2).toString().toInt()
+                    val element4 = input.elementAt(3).toString().toInt()
+                    val element5 = input.elementAt(4).toString().toInt()
 
-                    val result = element1.toInt() / inputLength
-                    val result2 = element2.toInt() / inputLength
-                    val result3 = element3.toInt() / inputLength
-                    val result4 = element4.toInt() / inputLength
-                    val result5 = element5.toInt() / inputLength
+                    val elementB = element1 + element2
+                    val elementC = elementB + element3
+                    val elementD = elementC + element4
+                    val elementE = elementD + element5
 
-                    if (result.compareTo(result) == 0 || lastElement.compareTo(lastElement) == 0 || result2.compareTo(result2) == 0 ||
-                            result3.compareTo(result3) == 0 || result4.compareTo(result4) == 0 || result5.compareTo(result5) == 0){
-                        binding.Anwser.text = "$inputVariable" + R.string.yes
+                    val result = element1 % 1
+                    val result2 = elementB % 2
+                    val result3 = elementC % 3
+                    val result4 = elementD % 4
+                    val result5 = elementE % 5
+
+                    if (result == 0 && lastElement == 0 && result2 == 0 &&
+                            result3 == 0 && result4 == 0 && result5 == 0){
+                        binding.Anwser.text = "Magic Number"
                     }else{
-                        binding.Anwser.text = "$inputVariable" + R.string.no
+                        binding.Anwser.text = "Is Not a Magic Number"
                     }
                 }else if (inputLength == 7){
-                    val element1 = input.elementAt(0)
-                    val element2 = input.elementAt(1)
-                    val element3 = input.elementAt(2)
-                    val element4 = input.elementAt(3)
-                    val element5 = input.elementAt(4)
-                    val element6 = input.elementAt(5)
+                    val element1 = input.elementAt(0).toString().toInt()
+                    val element2 = input.elementAt(1).toString().toInt()
+                    val element3 = input.elementAt(2).toString().toInt()
+                    val element4 = input.elementAt(3).toString().toInt()
+                    val element5 = input.elementAt(4).toString().toInt()
+                    val element6 = input.elementAt(5).toString().toInt()
 
-                    val result = element1.toInt() / inputLength
-                    val result2 = element2.toInt() / inputLength
-                    val result3 = element3.toInt() / inputLength
-                    val result4 = element4.toInt() / inputLength
-                    val result5 = element5.toInt() / inputLength
-                    val result6 = element6.toInt() / inputLength
+                    val elementB = element1 + element2
+                    val elementC = elementB + element3
+                    val elementD = elementC + element4
+                    val elementE = elementD + element5
+                    val elementF = elementE + element6
 
-                    if (result.compareTo(result) == 0 || lastElement.compareTo(lastElement) == 0 || result2.compareTo(result2) == 0 ||
-                            result3.compareTo(result3) == 0 || result4.compareTo(result4) == 0 || result5.compareTo(result5) == 0 || result6.compareTo(result6) == 0){
-                        binding.Anwser.text = "$inputVariable" + R.string.yes
+                    val result = element1 % 1
+                    val result2 = elementB % 2
+                    val result3 = elementC % 3
+                    val result4 = elementD % 4
+                    val result5 = elementE % 5
+                    val result6 = elementF % 6
+
+                    if (result == 0 && lastElement == 0 && result2 == 0 &&
+                            result3 == 0 && result4 == 0 && result5 == 0 && result6 == 0){
+                        binding.Anwser.text = "Magic Number"
                     }else{
-                        binding.Anwser.text = "$inputVariable" + R.string.no
+                        binding.Anwser.text = "Is Not a Magic Number"
                     }
                 }else if (inputLength == 8){
-                    val element1 = input.elementAt(0)
-                    val element2 = input.elementAt(1)
-                    val element3 = input.elementAt(2)
-                    val element4 = input.elementAt(3)
-                    val element5 = input.elementAt(4)
-                    val element6 = input.elementAt(5)
-                    val element7 = input.elementAt(6)
+                    val element1 = input.elementAt(0).toString().toInt()
+                    val element2 = input.elementAt(1).toString().toInt()
+                    val element3 = input.elementAt(2).toString().toInt()
+                    val element4 = input.elementAt(3).toString().toInt()
+                    val element5 = input.elementAt(4).toString().toInt()
+                    val element6 = input.elementAt(5).toString().toInt()
+                    val element7 = input.elementAt(6).toString().toInt()
 
-                    val result = element1.toInt() / inputLength
-                    val result2 = element2.toInt() / inputLength
-                    val result3 = element3.toInt() / inputLength
-                    val result4 = element4.toInt() / inputLength
-                    val result5 = element5.toInt() / inputLength
-                    val result6 = element6.toInt() / inputLength
-                    val result7 = element7.toInt() / inputLength
+                    val elementB = element1 + element2
+                    val elementC = elementB + element3
+                    val elementD = elementC + element4
+                    val elementE = elementD + element5
+                    val elementF = elementE + element6
+                    val elementG = elementF + element7
 
-                    if (result.compareTo(result) == 0 || lastElement.compareTo(lastElement) == 0 || result2.compareTo(result2) == 0 ||
-                            result3.compareTo(result3) == 0 || result4.compareTo(result4) == 0 || result5.compareTo(result5) == 0 || result6.compareTo(result6) == 0 ||
-                            result7.compareTo(result7) == 0){
-                        binding.Anwser.text = "$inputVariable" + R.string.yes
+                    val result = element1 % 1
+                    val result2 = elementB % 2
+                    val result3 = elementC % 3
+                    val result4 = elementD % 4
+                    val result5 = elementE % 5
+                    val result6 = elementF % 6
+                    val result7 = elementG % 7
+
+                    if (result == 0 && lastElement == 0 && result2 == 0 &&
+                            result3 == 0 && result4 == 0 && result5 == 0 && result6 == 0 &&
+                            result7 == 0){
+                        binding.Anwser.text = "Magic Number"
                     }else{
-                        binding.Anwser.text = "$inputVariable" + R.string.no
+                        binding.Anwser.text = "Is Not a Magic Number"
                     }
                 }else if (inputLength == 9) {
-                    val element1 = input.elementAt(0)
-                    val element2 = input.elementAt(1)
-                    val element3 = input.elementAt(2)
-                    val element4 = input.elementAt(3)
-                    val element5 = input.elementAt(4)
-                    val element6 = input.elementAt(5)
-                    val element7 = input.elementAt(6)
-                    val element8 = input.elementAt(7)
+                    val element1 = input.elementAt(0).toString().toInt()
+                    val element2 = input.elementAt(1).toString().toInt()
+                    val element3 = input.elementAt(2).toString().toInt()
+                    val element4 = input.elementAt(3).toString().toInt()
+                    val element5 = input.elementAt(4).toString().toInt()
+                    val element6 = input.elementAt(5).toString().toInt()
+                    val element7 = input.elementAt(6).toString().toInt()
+                    val element8 = input.elementAt(7).toString().toInt()
 
-                    val result = element1.toInt() / inputLength
-                    val result2 = element2.toInt() / inputLength
-                    val result3 = element3.toInt() / inputLength
-                    val result4 = element4.toInt() / inputLength
-                    val result5 = element5.toInt() / inputLength
-                    val result6 = element6.toInt() / inputLength
-                    val result7 = element7.toInt() / inputLength
-                    val result8 = element8.toInt() / inputLength
+                    val elementB = element1 + element2
+                    val elementC = elementB + element3
+                    val elementD = elementC + element4
+                    val elementE = elementD + element5
+                    val elementF = elementE + element6
+                    val elementG = elementF + element7
+                    val elementH = elementG + element8
 
-                    if (result.compareTo(result) == 0 || lastElement.compareTo(lastElement) == 0 || result2.compareTo(result2) == 0 ||
-                            result3.compareTo(result3) == 0 || result4.compareTo(result4) == 0 || result5.compareTo(result5) == 0 || result6.compareTo(result6) == 0 ||
-                            result7.compareTo(result7) == 0 || result8.compareTo(result8) == 0){
-                        binding.Anwser.text = "$inputVariable" + R.string.yes
+                    val result = element1 / 1
+                    val result2 = elementB / 2
+                    val result3 = elementC / 3
+                    val result4 = elementD / 4
+                    val result5 = elementE / 5
+                    val result6 = elementF / 6
+                    val result7 = elementG / 7
+                    val result8 = elementH / 8
+
+                    if (result == 0 && lastElement == 0 && result2 == 0 &&
+                            result3 == 0 && result4 == 0 && result5 == 0 && result6 == 0 &&
+                            result7 == 0 && result8 == 0){
+                        binding.Anwser.text = "Magic Number"
                     }else{
-                        binding.Anwser.text = "$inputVariable" + R.string.no
+                        binding.Anwser.text = "Is Not a Magic Number"
                     }
                 }
 
             }
         }
-
-
     }
-
-    private fun el(ele: Any) {
-
-    }
-
-
 }
-
 
