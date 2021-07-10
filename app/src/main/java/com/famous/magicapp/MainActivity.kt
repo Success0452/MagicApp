@@ -14,13 +14,14 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         binding.determineBtn.setOnClickListener{
 
             val input = binding.inputBox.text.toString()
 
             //check the length of the input number
             if (input.length > 9 || input.length < 2) {
-                binding.inputBox.error = "input a double figure and not > than 9 figure"
+                binding.inputBox.error = "input a double figure and not greater than 9 figure"
                 binding.inputBox.requestFocus()
                 return@setOnClickListener
 
@@ -29,7 +30,6 @@ class MainActivity : AppCompatActivity() {
 
                 val inputVariable = input.toInt()
                 val inputLength = input.length
-                val test7 = (inputLength - 1)
                 val lastElement = inputVariable % inputLength
 
 
@@ -117,8 +117,8 @@ class MainActivity : AppCompatActivity() {
                     val result4 = elementD % 4
                     val result5 = elementE % 5
 
-                    if (result == 0 && lastElement == 0 && result2 == 0 &&
-                            result3 == 0 && result4 == 0 && result5 == 0){
+                    if (result == 0 && lastElement == 0 &&
+                            result3 == 0 ){
                         binding.Anwser.text = "Magic Number"
                     }else{
                         binding.Anwser.text = "Is Not a Magic Number"
